@@ -94,7 +94,7 @@ if(!empty($_POST)) {
 			<div id="main">
 		        <div class="container">
 		            <div class="row main-row">
-			            <div class="6u 12u(mobile)">
+			            <div class="12u">
 			              <section>
 			                <h2>Settings</h2>
 
@@ -118,34 +118,6 @@ if(!empty($_POST)) {
 
 			                <p><a href="#" class="button" onclick="$('#settingsForm').submit(); return false;">Import</a></p>
 			                </form>
-			              </section>
-			            </div>
-
-			            <div class="8u 12u(mobile) important(mobile)">
-			              <section class="right-content">
-			                <?php if(!empty($report)) { ?>
-			                <p><a target="_blank" href="http://dek.im/d/<?php echo $_GET['deckCode']; ?>" title="Deck Image Builder by antiaverage"><img src="http://dek.im/deck/<?php echo $_GET['deckCode']; ?>" alt="Deck Image" id="deckImage" /></a></p>
-
-			                <?php 
-			                foreach($report as $r) { 
-			                  if($r['qi'] == 'N/A' || ($r['cost'] == 0 && $r['special'] == 0)) {
-			                      continue;
-			                  }
-			                ?>
-			                <div class="markStats" style="float: left; width:250px">
-			                    <p class="mark" style="float: left;">
-			                      <img height="84px" src="images/<?php echo $r['mark']; ?>.png" alt="<?php echo $r['mark']; ?>" />
-			                    </p>
-			                    
-			                    <p class="stats" style="float: left; margin: 0 10px 10px 10px; line-height: 125%; font-size: 95%;">
-			                      <strong>Cost:</strong> <?php echo $r['cost']; ?><br />
-			                      <strong>Ability Cost:</strong> <?php echo $r['special']; ?><br />
-			                      <strong>Quanta Generation:</strong> <?php echo $r['generation']; ?><br />
-			                      <strong>QI:</strong> <?php echo $r['qi']; ?> 
-			                      (<strong><?php echo ($r['qi'] >= 6 ? 'too few pillars' : ($r['qi'] <= 4 ? 'too many pillars' : 'good # of pillars')); ?></strong>)<br />
-			                    </p>
-			                </div>
-			                <?php } } ?>
 			              </section>
 			            </div>
 		            </div>
