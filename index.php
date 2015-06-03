@@ -104,6 +104,7 @@ if(!empty($_POST)) {
 			                	<span id="success_message"><?php if(!empty($success_message)) { echo $success_message . '<br />'; } ?></span>
 			                	<span>
 			                		Import file should contain two columns (module1 id, module2 id) and no header row.<br />
+			                		"Module 1" should be the plural name of the module used in column 1 of the CSV file.<br />
 			                		The Relationship Name can be found in Studio &gt; [Module] &gt; Relationships under the "Name" column.
 			                	</span><br />
 			                	<label for="hostname">Instance URL: </label>&nbsp;&nbsp;<input type="text" name="hostname" id="hostname" /><br />
